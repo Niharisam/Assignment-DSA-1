@@ -1,0 +1,15 @@
+def reverseList(A,start,end):
+    while start<end:
+        A[start],A[end]=A[end],A[start]
+        start+=1
+        end-=1
+A=[1,2,3,6,7,8]
+print(A)
+reverseList(A,0,5)
+print("reverse of list")
+print(A)
+
+output:
+[1, 2, 3, 6, 7, 8]
+reverse of list
+[8, 7, 6, 3, 2, 1]
