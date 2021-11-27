@@ -1,0 +1,24 @@
+No_of_chars=256
+def charCount(string):
+    count=[0]* No_of_chars
+    for i in string:
+        count[ord(i)]+=1
+    return count
+def firstnonrepeating(string):
+    count=charCount(string)
+    index=-1
+    k=0
+    for i in string:
+        if count[ord(i)]==1:
+            index=k
+            break
+        k+=1
+    return index
+string="edyodaplatform"
+index=firstnonrepeating(string)
+if index==1:
+    print("there is not having non repeating chars and it is empty")
+else:
+    print("having first non repeating char is " + string[index])
+output:
+having first non repeating char is e
